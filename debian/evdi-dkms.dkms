@@ -1,0 +1,9 @@
+PACKAGE_NAME="evdi"
+PACKAGE_VERSION=#MODULE_VERSION#
+MAKE="make -C src/ KVERS=${kernelver}"
+CLEAN="make -C src/ clean"
+BUILT_MODULE_NAME="evdi"
+BUILT_MODULE_LOCATION="./src"
+DEST_MODULE_LOCATION="/updates/dkms"
+AUTOINSTALL=yes
+REMAKE_INITRD=yes
