@@ -7,9 +7,15 @@ VERSION ?= $(shell dpkg-parsechangelog |\
 %:
 	dh $@
 
+override_dh_auto_configure:
+	echo There is nothing to configure!
+
+override_dh_auto_build:
+	echo There is nothing to build!
+
 override_dh_install:
-	mkdir -p debian/tmp/usr/src/evdi-$(VERSION)
-	dh_install -pevdi-dkms src/ usr/src/evdi-$(VERSION)
+	mkdir -p debian/tmp/usr/src/evdi-$(VERSION)/src
+	dh_install -pevdi-dkms module/* usr/src/evdi-$(VERSION)/src
 	dh_install -pevdi-dkms debian/modules.d usr/share/initramfs-tools/
 	dh_dkms -V $(VERSION)
 	dh_install

@@ -1,9 +1,9 @@
 PACKAGE_NAME="evdi"
 PACKAGE_VERSION=#MODULE_VERSION#
-MAKE="make -C src/ KVERS=${kernelver}"
+MAKE="make -C src/ all INCLUDEDIR=/lib/modules/$kernelver/build/include KVERSION=$kernelver KVERS=${kernelver} DKMS_BUILD=1"
 CLEAN="make -C src/ clean"
-BUILT_MODULE_NAME="evdi"
 BUILT_MODULE_LOCATION="./src"
-DEST_MODULE_LOCATION="/updates/dkms"
+DEST_MODULE_LOCATION="/kernel/drivers/gpu/drm/evdi"
+BUILT_MODULE_NAME="evdi"
 AUTOINSTALL=yes
 REMAKE_INITRD=yes
