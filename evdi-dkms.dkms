@@ -1,0 +1,17 @@
+## @file
+# Linux DKMS config script for the EVDI kernel modules
+#
+
+#
+# Copyright (c) 2015 DisplayLink (UK) Ltd.
+#
+
+PACKAGE_NAME="evdi"
+PACKAGE_VERSION="#MODULE_VERSION#"
+AUTOINSTALL=yes
+
+MAKE[0]="make -C ${kernel_source_dir} M=${dkms_tree}/${PACKAGE_NAME}/${PACKAGE_VERSION}/build DKMS_BUILD=1"
+DEST_MODULE_LOCATION[0]="/kernel/drivers/gpu/drm/evdi"
+BUILT_MODULE_NAME[0]="$PACKAGE_NAME"
+CLEAN="make -C ${kernel_source_dir} M=${dkms_tree}/${PACKAGE_NAME}/${PACKAGE_VERSION}/build DKMS_BUILD=1 clean"
+

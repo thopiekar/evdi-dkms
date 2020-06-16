@@ -1,0 +1,2 @@
+#! /usr/bin/dh-exec
+library/libevdi.so => /usr/lib/libevdi.so.0.${LIBRARY_VERSION}
