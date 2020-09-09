@@ -9,9 +9,6 @@ export DEB_BUILD_MAINT_OPTIONS=hardening=+bindnow
 %:
 	dh $@ --with dkms
 
-override_dh_auto_install:
-	dh_install -p evdi-dkms -XLICENSE module/* usr/src/evdi-$(DEB_VERSION_UPSTREAM)/
-
 override_dh_dkms:
 	dh_dkms -p evdi-dkms -V $(DEB_VERSION_UPSTREAM)
 

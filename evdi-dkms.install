@@ -1,0 +1,3 @@
+#! /usr/bin/dh-exec
+module/* usr/src/evdi-${DEB_VERSION_UPSTREAM}/
+debian/modules.d/evdi /usr/share/initramfs-tools/modules.d/
