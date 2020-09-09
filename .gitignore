@@ -1,0 +1,13 @@
+.debhelper/
+debhelper-build-stamp
+evdi-dkms.debhelper.log
+evdi-dkms.dkms.debhelper
+evdi-dkms.postinst.debhelper
+evdi-dkms.prerm.debhelper
+evdi-dkms.substvars
+evdi-dkms/
+files
+libevdi0-dev.substvars
+libevdi0-dev/
+libevdi0.substvars
+libevdi0/
