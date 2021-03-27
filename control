@@ -52,9 +52,14 @@ Description: Extensible Virtual Display Interface driver client library
 Package: libevdi0-dev
 Section: libdevel
 Architecture: all
-Depends: libevdi0 (>= ${source:Version}), libevdi0 (<< ${source:Version}.1~),
+Depends:
+ libevdi0 (>= ${source:Version}),
+ libevdi0 (<< ${source:Version}.1~),
  ${misc:Depends}
-Recommends: evdi-dkms
+Recommends:
+ evdi-dkms,
+Provides:
+ libevdi-dev,
 Description: EVDI driver client library dev package
  The Extensible Virtual Display Interface (EVDI) is a Linux kernel
  module that enables management of multiple screens, allowing user-space

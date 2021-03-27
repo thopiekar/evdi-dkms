@@ -6,14 +6,19 @@ export DEB_VERSION_UPSTREAM
 export LIBRARY_VERSION=$(shell echo -n "${DEB_VERSION_UPSTREAM}" | sed s/[^.[:digit:]]//g )
 export DEB_BUILD_MAINT_OPTIONS=hardening=+bindnow
 
+export DEB_PACKAGE_VERSION=$(shell dpkg-parsechangelog -SVersion | cut -f2 -d":" | cut -f1 -d"~")
+
 %:
 	dh $@ --with dkms
 
+override_dh_auto_clean:
+	$(MAKE) clean -C library $(MFLAGS)
+
 override_dh_dkms:
-	dh_dkms -p evdi-dkms -V $(DEB_VERSION_UPSTREAM)
+	dh_dkms -p evdi-dkms -V $(DEB_PACKAGE_VERSION)
 
 override_dh_auto_build:
 	CFLAGS="-I../module $(CFLAGS)" $(MAKE) -C library $(MFLAGS)
 
-override_dh_auto_clean:
-	$(MAKE) clean -C library $(MFLAGS)
+override_dh_auto_install:
+	echo "Nothing to do here!"
