@@ -1,44 +1,6 @@
-evdi (1.7.0) focal; urgency=medium
+evdi-1.7 (1.7.0) focal; urgency=medium
 
-  * New upstream release (1.7.0)
+  * Latest 1.7.x version
+  * Creating separate set of packages for latest displaylink service
 
- -- Paolo Pisati <paolo.pisati@canonical.com>  Tue, 12 Nov 2019 10:08:47 +0000
-
-evdi (1.6.0+dfsg-1ubuntu3) focal; urgency=medium
-
-  * Linux 5.4 compatibility (LP: #1848586)
-    - debian/patches/0007-Fix-FTBFS-5.4.patch
-
- -- Paolo Pisati <paolo.pisati@canonical.com>  Tue, 12 Nov 2019 10:08:47 +0000
-
-evdi (1.6.0+dfsg-1ubuntu2) eoan; urgency=medium
-
-  * Apply 3 upstream fixes to bugs found with static analysis (LP: #1833590)
-   - 4a18c38b70e7 ("Fix potiential null pointer dereference when 
-     initializing pointer fb)
-   - 7e840df07930 ("Free evdi->cursor before freeing evdi")
-   - 41afcc551def ("Don't dereference pointer state if it is null")
-
- -- Colin Ian King <colin.king@canonical.com>  Thu, 20 Jun 2019 18:04:22 +0100
-
-evdi (1.6.0+dfsg-1ubuntu1) eoan; urgency=medium
-
-  * Add v5.1 and v5.2 kernel compat fixes (LP: #1830043)
-   - Adjust for post 5.0 kernels (upstream commit 979f7bc2089138aed)
-   - Linux 5.2: use drm_fb_helper_fill_info, replaces the now
-     deprecated drm_fb_helper_fill_{var|info}
-
- -- Colin Ian King <colin.king@canonical.com>  Wed, 5 Jun 2019 09:31:31 +0100
-
-evdi (1.6.0+dfsg-1) unstable; urgency=medium
-
-  * New upstream release (1.6.0)
-
- -- Hanno Stock <opensource@hanno-stock.de>  Mon, 25 Feb 2019 10:53:00 +0100
-
-evdi (1.5.1+dfsg-1) unstable; urgency=medium
-
-  * Initial release (Closes: #918992)
-  * removed files with unclear license for DFSG conformance
-
- -- Hanno Stock <opensource@hanno-stock.de>  Thu, 24 Jan 2019 15:00:59 +0100
+ -- Thomas Karl Pietrowski <thopiekar@gmail.com>  Tue, 04 Apr 2021 20:48:39 +0200

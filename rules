@@ -15,7 +15,7 @@ override_dh_auto_clean:
 	$(MAKE) clean -C library $(MFLAGS)
 
 override_dh_dkms:
-	dh_dkms -p evdi-dkms -V $(DEB_PACKAGE_VERSION)
+	dh_dkms -p evdi-1.7-dkms -V $(DEB_PACKAGE_VERSION)
 
 override_dh_auto_build:
 	CFLAGS="-I../module $(CFLAGS)" $(MAKE) -C library $(MFLAGS)
